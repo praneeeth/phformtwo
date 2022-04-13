@@ -1006,88 +1006,66 @@
             }
         }
     </script>
-    <div class="demo-wrap">
-        <div style="max-width: 600px;" class="demo-content center">
-            <img src="https://cdn.yellowmessenger.com/j4mnoorqT5BZ1620811806565.png" alt=""
-                style="float: right;max-width: 20px;max-height: 20px;margin-right: 5px;" onclick="back()">
-            <div id="selection" style="max-width: 90%;">
-                <!-- <center>
-                    <h6 id="title"
-                        style="color: black;text-align: left;margin-bottom: 25px;margin-top: 10px;font-size: 12px;">
-                        Harap isi detail berikut untuk menghubungkan Anda kepada tim Customer Support kami 😊
-                    </h6>
-                </center> -->
-            </div>
-            <p id="invalid-message" style="color:hsl(0, 100%, 50%);padding-left: 3px;font-size: 12px;"></p>
-            <div id="message"></div>
-            <!-- <h6 id="name-header">
-                Nama<sup>*</sup>
-            </h6>
-            <input type="text" placeholder="Silakan Masukkan Nama Anda" class="input-field" id="name" name="name"
-                oninput="nameHandler()" required>
-            <h6 id="email-header">
-                Email<sup>*</sup>
-            </h6>
-            <input type="email" placeholder="Silakan Masukkan Email Anda" class="input-field" id="email" name="email"
-                oninput="emailHandler()" required>
-            <h6 id="phone-header">
-                Nomor Handphone<sup>*</sup>
-            </h6> -->
-            <!-- <input type="number" placeholder="Silakan Masukkan No.Handphone Anda" class="input-field" id="phone"
-                name="phone"> -->
-
-            <h6 id="game-header">
-                Produk/Game<sup>*</sup>
-            </h6>
-            <select style="width: 96%;
-max-width: 96%;
-margin-left: auto;
-margin-right: auto;
-border-radius: 2px;
-border-color: #a1a1a1;
-height: 25px;" class="center" name="games" id="games">
-                <option id="game-option" value="null" disabled selected></option>
-            </select>
-            <!-- Silakan pilih produk/game nya -->
-            <br>
-            <h6 id="payment-header">
-                Payment Method<sup>*</sup>
-            </h6>
-            <select style="width: 96%;
-    max-width: 96%;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 2px;
-    border-color: #a1a1a1;
-    height: 25px;" class="center" name="country" id="country">
-                <option id="product-option" value="null" disabled selected></option>
-            </select>
-            <!-- Pilih Saluran pembarayan yang Anda inginkan -->
-            <br>
-            <div id="offline-message">
-            </div>
-            <!-- <input type="file" id="attachment" name="filename" onchange="fileUploaded()"> -->
-            <!-- <div class="image-upload">
-                <input type="file" name="" id="logo" onchange="fileValue(this)">
-                <label for="logo" class="upload-field" id="file-label">
-                    <div class="file-thumbnail">
-                        <img id="image-preview" src="https://www.btklsby.go.id/images/placeholder/basic.png" alt="">
-                        <h3 id="filename">
-                            Drag and Drop
-                        </h3>
-                        <p>Supports JPG, PNG, SVG</p>
+                            <div class="demo-wrap">
+                                <div style="max-width: 600px;" class="demo-content center">
+                                    <img src="https://cdn.yellowmessenger.com/j4mnoorqT5BZ1620811806565.png" alt=""
+                                        style="float: right;max-width: 20px;max-height: 20px;margin-right: 5px;" onclick="back()">
+                                       
+                                        <p id="invalid-message" style="color:hsl(0, 100%, 50%);padding-left: 3px;font-size: 12px;"></p>
+                                     
+                                                    
+                                                        <h6 id="game-header">
+                                                            Produk/Game<sup>*</sup>
+                                                        </h6>
+                                                        <select style="width: 96%;
+            max-width: 96%;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 2px;
+            border-color: #a1a1a1;
+            height: 25px;" class="center" name="games" id="games">
+                                                            <option id="game-option" value="null" disabled selected></option>
+                                                        </select>
+                                                        <!-- Silakan pilih produk/game nya -->
+                                                        <br>
+                                    <h6 id="payment-header">
+                                                        Payment Method<sup>*</sup>
+                                                    </h6>
+                                                    <select style="width: 96%;
+            max-width: 96%;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 2px;
+            border-color: #a1a1a1;
+            height: 25px;" class="center" name="country" id="country">
+                                                        <option id="product-option" value="null" disabled selected></option>
+                                                    </select>
+                                                    <!-- Pilih Saluran pembarayan yang Anda inginkan -->
+                                                    <br>
+                                                            <div id="offline-message">
+                                                            </div>
+                                                            <!-- <input type="file" id="attachment" name="filename" onchange="fileUploaded()"> -->
+                                                                <!-- <div class="image-upload">
+                                                                    <input type="file" name="" id="logo" onchange="fileValue(this)">
+                                                                        <label for="logo" class="upload-field" id="file-label">
+                                                                            <div class="file-thumbnail">
+                                                                                <img id="image-preview" src="https://www.btklsby.go.id/images/placeholder/basic.png" alt="">
+                                                                                    <h3 id="filename">
+                                                                                        Drag and Drop
+                                                                                    </h3>
+                                                                                    <p>Supports JPG, PNG, SVG</p>
                     </div>
                 </label>
             </div> -->
-            <!-- <h6 id="attachment-header">
-                Attachments<sup>*</sup>
-            </h6>
-            <input type="file" class="form-control input-field" style="height: 30px;" id="customFile" onchange="fileUpload()"/> -->
-            <input type="button" value="Kirim" id="submit-button" onclick="submit()"
-                style="max-width: 60%;margin: 15px auto;background-color: #385072;color: #ffffff"
-                class="btn btn-primary center" />
+                                                                        <!-- <h6 id="attachment-header">
+                                                                            Attachments<sup>*</sup>
+                                                                        </h6>
+                                                                        <input type="file" class="form-control input-field" style="height: 30px;" id="customFile" onchange="fileUpload()" /> -->
+                                                                        <input type="button" value="Kirim" id="submit-button" onclick="submit()"
+                                                                            style="max-width: 60%;margin: 15px auto;background-color: #385072;color: #ffffff"
+                                                                            class="btn btn-primary center" />
         </div>
-    </div>
+                                                                </div>
 </body>
 
 </html>
