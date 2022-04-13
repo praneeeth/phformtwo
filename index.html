@@ -255,50 +255,47 @@
     </style>
     <script>
         var language = "tl"
-        window.addEventListener('load', (event) => {
+window.addEventListener('load', (event) => {
             console.log('page is fully loaded');
-            let { lang, status } = Qs.parse(location.search, { ignoreQueryPrefix: true })
-            language = lang
-            document.getElementById("title").innerHTML = language == "tl" ? "Pakisagutan ang mga sumusunod para mai-connect ka sa aming Customer Support Team 😊" : "Please fill in the following details to connect you to our Customer Support team 😊"
-            // document.getElementById("name-header").innerHTML = language == "tl" ? "Pangalan" : "Name"
-            // document.getElementById("email-header").innerHTML = language == "tl" ? "Email" : "Email"
-            // document.getElementById("phone-header").innerHTML = language == "tl" ? "Cellphone Number" : "Mobile Number"
-            document.getElementById("payment-header").innerHTML = language == "tl" ? "Payment Method" : "Payment Channel"
-            document.getElementById("game-header").innerHTML = language == "tl" ? "Product/Game" : "Product/Game"
-            // document.getElementById("name").placeholder = language == "tl" ? "I-enter ang iyong pangalan" : "Please enter your name"
-            // document.getElementById("email").placeholder = language == "tl" ? "I-enter ang iyong email" : "Please enter your email"
-            // document.getElementById("phone").placeholder = language == "tl" ? "I-enter ang iyong cellphone number" : "Please enter your mobile number"
-            document.getElementById("product-option").innerHTML = language == "tl" ? "I-enter ang iyong payment method " : "Please select your payment channel"
-            document.getElementById("game-option").innerHTML = language == "tl" ? "I-enter ang iyong game/Product" : "Please select your game/product"
-            document.getElementById("submit-button").value = language == "tl" ? "Ipasa" : "Submit"
-            if (status == "offline") {
-                const message = document.createElement("h6")
-                                message.innerHTML = language == "tl" ? "Mensahe" : "Message"
-                                message.id = "message-header"
-                                document.getElementById("offline-message").appendChild(message)
-                                const messageBox = document.createElement("textarea")
-                                // messageBox.placeholder = language == "tl" ? "message" : "message"
-                                messageBox.type = "text"
-                                messageBox.id = "user-message"
-                                messageBox.name = "message"
-                                // messageBox.onchange = messageHandler()
-                                messageBox.classList.add("input-field")
-                                messageBox.style.height = "50px"
-                                document.getElementById("offline-message").appendChild(messageBox)
-                                // messageBox.setAttribute("oninput", messageHandler());
-                                const attachment = document.createElement("h6")
-                                attachment.innerHTML = language == "tl" ? "Attachment" : "Attachment"
-                                attachment.id = "attachment-header"
-                                document.getElementById("offline-message").appendChild(attachment)
-                                const attachmentInput = document.createElement("input")
-                                attachmentInput.type = "file"
-                                attachmentInput.classList.add("form-control")
-                                attachmentInput.classList.add("input-field")
-                                attachmentInput.style.height = "30px"
-                                attachmentInput.id = "read-file"
-                                // attachmentInput.onchange = "fileUpload()"
-                                document.getElementById("offline-message").appendChild(attachmentInput)
-            }
+        let {lang, status} = Qs.parse(location.search, {ignoreQueryPrefix: true })
+        language = lang
+        // document.getElementById("title").innerHTML = language == "tl" ? "Pakisagutan ang mga sumusunod para mai-connect ka sa aming Customer Support Team 😊" : "Please fill in the following details to connect you to our Customer Support team 😊"
+        // document.getElementById("name-header").innerHTML = language == "tl" ? "Pangalan" : "Name"
+        // document.getElementById("email-header").innerHTML = language == "tl" ? "Email" : "Email"
+        document.getElementById("phone-header").innerHTML = language == "tl" ? "Cellphone Number" : "Mobile Number"
+        document.getElementById("payment-header").innerHTML = language == "tl" ? "Payment Method" : "Payment Channel"
+        document.getElementById("game-header").innerHTML = language == "tl" ? "Product/Game" : "Product/Game"
+        document.getElementById("product-option").innerHTML = language == "tl" ? "I-enter ang iyong payment method " : "Please select your payment channel"
+        document.getElementById("game-option").innerHTML = language == "tl" ? "I-enter ang iyong game/Product" : "Please select your game/product"
+        document.getElementById("submit-button").value = language == "tl" ? "Ipasa" : "Submit"
+        if (status == "offline") {
+const message = document.createElement("h6")
+        message.innerHTML = language == "tl" ? "Mensahe" : "Message"
+        message.id = "message-header"
+        document.getElementById("offline-message").appendChild(message)
+        const messageBox = document.createElement("textarea")
+        // messageBox.placeholder = language == "tl" ? "message" : "message"
+        messageBox.type = "text"
+        messageBox.id = "user-message"
+        messageBox.name = "message"
+        // messageBox.onchange = messageHandler()
+        messageBox.classList.add("input-field")
+        messageBox.style.height = "50px"
+        document.getElementById("offline-message").appendChild(messageBox)
+        // messageBox.setAttribute("oninput", messageHandler());
+        const attachment = document.createElement("h6")
+        attachment.innerHTML = language == "tl" ? "Attachment" : "Attachment"
+        attachment.id = "attachment-header"
+        document.getElementById("offline-message").appendChild(attachment)
+        const attachmentInput = document.createElement("input")
+        attachmentInput.type = "file"
+        attachmentInput.classList.add("form-control")
+        attachmentInput.classList.add("input-field")
+        attachmentInput.style.height = "30px"
+        attachmentInput.id = "read-file"
+        // attachmentInput.onchange = "fileUpload()"
+        document.getElementById("offline-message").appendChild(attachmentInput)
+}
             // console.log(language)
         });
 
@@ -809,7 +806,7 @@
             const message = document.getElementById("user-message")
             const submit = document.getElementById("submit-button")
             // console.log(message.value, "Message value after submitting")
-            if (data["payment-type"] === "null" || data.games === "null") {
+            if (data["payment-type"] === "null" || data.games === "null" ) {
                 // if (data.name.length == 0) {
                 //     document.getElementById("invalid-message").innerHTML = language == "id" ? "Nama wajib diisi untuk terhubung ke Agen Kami!" : "Name is required to connect an agent!"
                 //     name.placeholder = language == "id" ? 'Nama wajib diisi untuk terhubung ke Agen Kami' : "Name is required to connect an agent"
@@ -889,7 +886,7 @@
                         games.disabled = true;
                         submit.disabled = true;
 
-
+                        
                         var requestOptions = {
                             method: 'POST',
                             headers: myHeaders,
@@ -1006,66 +1003,88 @@
             }
         }
     </script>
-                            <div class="demo-wrap">
-                                <div style="max-width: 600px;" class="demo-content center">
-                                    <img src="https://cdn.yellowmessenger.com/j4mnoorqT5BZ1620811806565.png" alt=""
-                                        style="float: right;max-width: 20px;max-height: 20px;margin-right: 5px;" onclick="back()">
-                                       
-                                        <p id="invalid-message" style="color:hsl(0, 100%, 50%);padding-left: 3px;font-size: 12px;"></p>
-                                     
-                                                    
-                                                        <h6 id="game-header">
-                                                            Produk/Game<sup>*</sup>
-                                                        </h6>
-                                                        <select style="width: 96%;
-            max-width: 96%;
-            margin-left: auto;
-            margin-right: auto;
-            border-radius: 2px;
-            border-color: #a1a1a1;
-            height: 25px;" class="center" name="games" id="games">
-                                                            <option id="game-option" value="null" disabled selected></option>
-                                                        </select>
-                                                        <!-- Silakan pilih produk/game nya -->
-                                                        <br>
-                                    <h6 id="payment-header">
-                                                        Payment Method<sup>*</sup>
-                                                    </h6>
-                                                    <select style="width: 96%;
+    <div class="demo-wrap">
+        <div style="max-width: 600px;" class="demo-content center">
+            <img src="https://cdn.yellowmessenger.com/j4mnoorqT5BZ1620811806565.png" alt=""
+                style="float: right;max-width: 20px;max-height: 20px;margin-right: 5px;" onclick="back()">
+            <div id="selection" style="max-width: 90%;">
+                <!-- <center>
+                    <h6 id="title"
+                        style="color: black;text-align: left;margin-bottom: 25px;margin-top: 10px;font-size: 12px;">
+                        Harap isi detail berikut untuk menghubungkan Anda kepada tim Customer Support kami 😊
+                    </h6>
+                </center> -->
+            </div>
+            <p id="invalid-message" style="color:hsl(0, 100%, 50%);padding-left: 3px;font-size: 12px;"></p>
+            <div id="message"></div>
+            <!-- <h6 id="name-header">
+                Nama<sup>*</sup>
+            </h6>
+            <input type="text" placeholder="Silakan Masukkan Nama Anda" class="input-field" id="name" name="name"
+                oninput="nameHandler()" required>
+            <h6 id="email-header">
+                Email<sup>*</sup>
+            </h6>
+            <input type="email" placeholder="Silakan Masukkan Email Anda" class="input-field" id="email" name="email"
+                oninput="emailHandler()" required>
+            <h6 id="phone-header">
+                Nomor Handphone<sup>*</sup>
+            </h6> -->
+            <!-- <input type="number" placeholder="Silakan Masukkan No.Handphone Anda" class="input-field" id="phone"
+                name="phone"> -->
+                <h6 id="game-header">
+                    Produk/Game<sup>*</sup>
+                </h6>
+                <select style="width: 96%;
+                max-width: 96%;
+                margin-left: auto;
+                margin-right: auto;
+                border-radius: 2px;
+                border-color: #a1a1a1;
+                height: 25px;" class="center" name="games" id="games">
+                    <option id="game-option" value="null" disabled selected></option>
+                </select>
+            <h6 id="payment-header">
+                Payment Method<sup>*</sup>
+            </h6>
+            <select style="width: 96%;
             max-width: 96%;
             margin-left: auto;
             margin-right: auto;
             border-radius: 2px;
             border-color: #a1a1a1;
             height: 25px;" class="center" name="country" id="country">
-                                                        <option id="product-option" value="null" disabled selected></option>
-                                                    </select>
-                                                    <!-- Pilih Saluran pembarayan yang Anda inginkan -->
-                                                    <br>
-                                                            <div id="offline-message">
-                                                            </div>
-                                                            <!-- <input type="file" id="attachment" name="filename" onchange="fileUploaded()"> -->
-                                                                <!-- <div class="image-upload">
-                                                                    <input type="file" name="" id="logo" onchange="fileValue(this)">
-                                                                        <label for="logo" class="upload-field" id="file-label">
-                                                                            <div class="file-thumbnail">
-                                                                                <img id="image-preview" src="https://www.btklsby.go.id/images/placeholder/basic.png" alt="">
-                                                                                    <h3 id="filename">
-                                                                                        Drag and Drop
-                                                                                    </h3>
-                                                                                    <p>Supports JPG, PNG, SVG</p>
+                <option id="product-option" value="null" disabled selected></option>
+            </select>
+            <!-- Pilih Saluran pembarayan yang Anda inginkan -->
+            <br>
+            
+            <!-- Silakan pilih produk/game nya -->
+            <br>
+            <div id="offline-message">
+            </div> 
+            <!-- <input type="file" id="attachment" name="filename" onchange="fileUploaded()"> -->
+            <!-- <div class="image-upload">
+                <input type="file" name="" id="logo" onchange="fileValue(this)">
+                <label for="logo" class="upload-field" id="file-label">
+                    <div class="file-thumbnail">
+                        <img id="image-preview" src="https://www.btklsby.go.id/images/placeholder/basic.png" alt="">
+                        <h3 id="filename">
+                            Drag and Drop
+                        </h3>
+                        <p>Supports JPG, PNG, SVG</p>
                     </div>
                 </label>
             </div> -->
-                                                                        <!-- <h6 id="attachment-header">
-                                                                            Attachments<sup>*</sup>
-                                                                        </h6>
-                                                                        <input type="file" class="form-control input-field" style="height: 30px;" id="customFile" onchange="fileUpload()" /> -->
-                                                                        <input type="button" value="Kirim" id="submit-button" onclick="submit()"
-                                                                            style="max-width: 60%;margin: 15px auto;background-color: #385072;color: #ffffff"
-                                                                            class="btn btn-primary center" />
+            <!-- <h6 id="attachment-header">
+                Attachments<sup>*</sup>
+            </h6>
+            <input type="file" class="form-control input-field" style="height: 30px;" id="customFile" onchange="fileUpload()"/> -->
+            <input type="button" value="Kirim" id="submit-button" onclick="submit()"
+                style="max-width: 60%;margin: 15px auto;background-color: #385072;color: #ffffff"
+                class="btn btn-primary center" />
         </div>
-                                                                </div>
+    </div>
 </body>
 
 </html>
