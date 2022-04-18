@@ -255,47 +255,47 @@
     </style>
     <script>
         var language = "tl"
-window.addEventListener('load', (event) => {
+        window.addEventListener('load', (event) => {
             console.log('page is fully loaded');
-        let {lang, status} = Qs.parse(location.search, {ignoreQueryPrefix: true })
-        language = lang
-        // document.getElementById("title").innerHTML = language == "tl" ? "Pakisagutan ang mga sumusunod para mai-connect ka sa aming Customer Support Team 😊" : "Please fill in the following details to connect you to our Customer Support team 😊"
-        // document.getElementById("name-header").innerHTML = language == "tl" ? "Pangalan" : "Name"
-        // document.getElementById("email-header").innerHTML = language == "tl" ? "Email" : "Email"
-        document.getElementById("phone-header").innerHTML = language == "tl" ? "Cellphone Number" : "Mobile Number"
-        document.getElementById("payment-header").innerHTML = language == "tl" ? "Payment Method" : "Payment Channel"
+            let { lang, status } = Qs.parse(location.search, { ignoreQueryPrefix: true })
+            language = lang
+            // document.getElementById("title").innerHTML = language == "tl" ? "Harap isi detail berikut untuk menghubungkan Anda kepada tim Customer Support kami 😊" : "Please fill in the following details to connect you to our Customer Support team 😊"
+            // document.getElementById("name-header").innerHTML = language == "tl" ? "Nama" : "Name"
+            // document.getElementById("email-header").innerHTML = language == "tl" ? "Email" : "Email"
+            // document.getElementById("phone-header").innerHTML = language == "tl" ? "Nomor Handphone" : "Mobile Number"
+            document.getElementById("payment-header").innerHTML = language == "tl" ? "Payment Method" : "Payment Channel"
         document.getElementById("game-header").innerHTML = language == "tl" ? "Product/Game" : "Product/Game"
         document.getElementById("product-option").innerHTML = language == "tl" ? "I-enter ang iyong payment method " : "Please select your payment channel"
         document.getElementById("game-option").innerHTML = language == "tl" ? "I-enter ang iyong game/Product" : "Please select your game/product"
         document.getElementById("submit-button").value = language == "tl" ? "Ipasa" : "Submit"
-        if (status == "offline") {
-const message = document.createElement("h6")
-        message.innerHTML = language == "tl" ? "Mensahe" : "Message"
-        message.id = "message-header"
-        document.getElementById("offline-message").appendChild(message)
-        const messageBox = document.createElement("textarea")
-        // messageBox.placeholder = language == "tl" ? "message" : "message"
-        messageBox.type = "text"
-        messageBox.id = "user-message"
-        messageBox.name = "message"
-        // messageBox.onchange = messageHandler()
-        messageBox.classList.add("input-field")
-        messageBox.style.height = "50px"
-        document.getElementById("offline-message").appendChild(messageBox)
-        // messageBox.setAttribute("oninput", messageHandler());
-        const attachment = document.createElement("h6")
-        attachment.innerHTML = language == "tl" ? "Attachment" : "Attachment"
-        attachment.id = "attachment-header"
-        document.getElementById("offline-message").appendChild(attachment)
-        const attachmentInput = document.createElement("input")
-        attachmentInput.type = "file"
-        attachmentInput.classList.add("form-control")
-        attachmentInput.classList.add("input-field")
-        attachmentInput.style.height = "30px"
-        attachmentInput.id = "read-file"
-        // attachmentInput.onchange = "fileUpload()"
-        document.getElementById("offline-message").appendChild(attachmentInput)
-}
+            if (status == "offline") {
+                const message = document.createElement("h6")
+                message.innerHTML = language == "tl" ? "Mensahe" : "Message"
+                message.id = "message-header"
+                document.getElementById("offline-message").appendChild(message)
+                const messageBox = document.createElement("textarea")
+                // messageBox.placeholder = language == "tl" ? "message" : "message"
+                messageBox.type = "text"
+                messageBox.id = "user-message"
+                messageBox.name = "message"
+                // messageBox.onchange = messageHandler()
+                messageBox.classList.add("input-field")
+                messageBox.style.height = "50px"
+                document.getElementById("offline-message").appendChild(messageBox)
+                // messageBox.setAttribute("oninput", messageHandler());
+                const attachment = document.createElement("h6")
+                attachment.innerHTML = language == "tl" ? "Attachment" : "Attachment"
+                attachment.id = "attachment-header"
+                document.getElementById("offline-message").appendChild(attachment)
+                const attachmentInput = document.createElement("input")
+                attachmentInput.type = "file"
+                attachmentInput.classList.add("form-control")
+                attachmentInput.classList.add("input-field")
+                attachmentInput.style.height = "30px"
+                attachmentInput.id = "read-file"
+                // attachmentInput.onchange = "fileUpload()"
+                document.getElementById("offline-message").appendChild(attachmentInput)
+            }
             // console.log(language)
         });
 
@@ -707,6 +707,7 @@ const message = document.createElement("h6")
                 "Vagary",
                 "League Of Legends",
                 "Yepop"];
+           
             var countriesArray = ["Philippines"]
             $('#games').select2({
                 data: gamesArray
@@ -741,7 +742,7 @@ const message = document.createElement("h6")
         //     const name = document.getElementById("name")
         //     if (document.getElementById("name").value.length == 0) {
         //         name.classList.add('invalid-placeholder');
-        //         document.getElementById("invalid-message").innerHTML = language == "id" ? "Nama wajib diisi untuk terhubung ke Agen Kami!" : "Name is required to connect an agent!"
+        //         document.getElementById("invalid-message").innerHTML = language == "tl" ? "Nama wajib diisi untuk terhubung ke Agen Kami!" : "Name is required to connect an agent!"
         //     }
         //     else {
         //         name.classList.remove("invalid-placeholder");
@@ -753,7 +754,7 @@ const message = document.createElement("h6")
         //     const email = document.getElementById("email")
         //     if (document.getElementById("email").value.length == 0) {
         //         email.classList.add('invalid-placeholder');
-        //         document.getElementById("invalid-message").innerHTML = language == "id" ? "Email wajib diisi untuk terhubung ke Agen Kami!" : "Email is required to connect an agent!"
+        //         document.getElementById("invalid-message").innerHTML = language == "tl" ? "Email wajib diisi untuk terhubung ke Agen Kami!" : "Email is required to connect an agent!"
         //     }
         //     else {
         //         email.classList.remove("invalid-placeholder");
@@ -765,7 +766,7 @@ const message = document.createElement("h6")
         //     const phone = document.getElementById("phone")
         //     if (document.getElementById("phone").value.length == 0) {
         //         phone.classList.add('invalid-placeholder');
-        //         document.getElementById("invalid-message").innerHTML = language == "id" ? "No.Telepon wajib diisi untuk terhubung ke Agen Kami!" : "Phone number is required to connect an agent!"
+        //         document.getElementById("invalid-message").innerHTML = language == "tl" ? "No.Telepon wajib diisi untuk terhubung ke Agen Kami!" : "Phone number is required to connect an agent!"
         //     }
         //     else {
         //         phone.classList.remove("invalid-placeholder");
@@ -778,7 +779,7 @@ const message = document.createElement("h6")
             const message = document.getElementById("user-message")
             if (message.value.length == 0) {
                 // message.classList.add('invalid-placeholder');
-                document.getElementById("invalid-message").innerHTML = language == "id" ? "" : "A message should be sent to connect to an agent"
+                document.getElementById("invalid-message").innerHTML = language == "tl" ? "" : "A message should be sent to connect to an agent"
             }
             else {
                 // message.classList.remove("invalid-placeholder");
@@ -808,8 +809,8 @@ const message = document.createElement("h6")
             // console.log(message.value, "Message value after submitting")
             if (data["payment-type"] === "null" || data.games === "null" ) {
                 // if (data.name.length == 0) {
-                //     document.getElementById("invalid-message").innerHTML = language == "id" ? "Nama wajib diisi untuk terhubung ke Agen Kami!" : "Name is required to connect an agent!"
-                //     name.placeholder = language == "id" ? 'Nama wajib diisi untuk terhubung ke Agen Kami' : "Name is required to connect an agent"
+                //     document.getElementById("invalid-message").innerHTML = language == "tl" ? "Nama wajib diisi untuk terhubung ke Agen Kami!" : "Name is required to connect an agent!"
+                //     name.placeholder = language == "tl" ? 'Nama wajib diisi untuk terhubung ke Agen Kami' : "Name is required to connect an agent"
                 //     name.classList.add('invalid-placeholder');
                 //     email.classList.remove("invalid-placeholder");
                 //     phone.classList.remove("invalid-placeholder")
@@ -817,8 +818,8 @@ const message = document.createElement("h6")
                 //     name.focus();
                 // }
                 // else if (data.email.length == 0) {
-                //     document.getElementById("invalid-message").innerHTML = language == "id" ? "Email wajib diisi untuk terhubung ke Agen Kami!" : "Email is required to connect an agent!"
-                //     email.placeholder = language == "id" ? 'Email wajib diisi untuk terhubung ke Agen Kami' : "Email is required to connect an agent"
+                //     document.getElementById("invalid-message").innerHTML = language == "tl" ? "Email wajib diisi untuk terhubung ke Agen Kami!" : "Email is required to connect an agent!"
+                //     email.placeholder = language == "tl" ? 'Email wajib diisi untuk terhubung ke Agen Kami' : "Email is required to connect an agent"
                 //     email.classList.add('invalid-placeholder');
                 //     name.classList.remove("invalid-placeholder");
                 //     phone.classList.remove("invalid-placeholder")
@@ -826,8 +827,8 @@ const message = document.createElement("h6")
                 //     email.focus();
                 // }
                 // else if (!emailRegex.test(data.email)) {
-                //     document.getElementById("invalid-message").innerHTML = language == "id" ? "Email yang Valid jadi persyaratan untuk terhubung ke Agen Kami" : "Valid email is required to connect an agent"
-                //     email.placeholder = language == "id" ? 'Email yang Valid jadi persyaratan untuk terhubung ke Agen Kami' : "Valid email is required to connect an agent"
+                //     document.getElementById("invalid-message").innerHTML = language == "tl" ? "Email yang Valid jadi persyaratan untuk terhubung ke Agen Kami" : "Valid email is required to connect an agent"
+                //     email.placeholder = language == "tl" ? 'Email yang Valid jadi persyaratan untuk terhubung ke Agen Kami' : "Valid email is required to connect an agent"
                 //     name.classList.remove("invalid-placeholder");
                 //     phone.classList.remove("invalid-placeholder")
                 //     message.classList.remove("invalid-placeholder")
@@ -835,8 +836,8 @@ const message = document.createElement("h6")
                 // }
 
                 // else if(data.message.length == 0 ) {    //Added
-                //     document.getElementById("invalid-message").innerHTML = language == "id" ? "Silakan masukan pesan untuk menyelesaikan form " : "A message should be sent to connect to an agent"
-                //     message.placeholder = language == "id" ? 'Silakan masukan pesan untuk menyelesaikan form ' : "A message should be sent to connect to an agent"
+                //     document.getElementById("invalid-message").innerHTML = language == "tl" ? "Silakan masukan pesan untuk menyelesaikan form " : "A message should be sent to connect to an agent"
+                //     message.placeholder = language == "tl" ? 'Silakan masukan pesan untuk menyelesaikan form ' : "A message should be sent to connect to an agent"
                 //     name.classList.add('invalid-placeholder');
                 //     email.classList.remove("invalid-placeholder");
                 //     phone.classList.remove("invalid-placeholder")
@@ -844,8 +845,8 @@ const message = document.createElement("h6")
                 //     message.focus();
                 // }
                 // else if (data.phone.length == 0) {
-                //     document.getElementById("invalid-message").innerHTML = language == "id" ? "No.Telepon wajib diisi untuk terhubung ke Agen Kami!" : "Phone number is required to connect an agent!"
-                //     phone.placeholder = language == "id" ? 'No.Telepon wajib diisi untuk terhubung ke Agen Kami' : "Phone number is required to connect an agent"
+                //     document.getElementById("invalid-message").innerHTML = language == "tl" ? "No.Telepon wajib diisi untuk terhubung ke Agen Kami!" : "Phone number is required to connect an agent!"
+                //     phone.placeholder = language == "tl" ? 'No.Telepon wajib diisi untuk terhubung ke Agen Kami' : "Phone number is required to connect an agent"
                 //     phone.classList.add('invalid-placeholder');
                 //     name.classList.remove("invalid-placeholder");
                 //     email.classList.remove("invalid-placeholder")
@@ -853,8 +854,8 @@ const message = document.createElement("h6")
                 //     phone.focus();
                 // }
                 // else if (message.value == "") {
-                //     document.getElementById("invalid-message").innerHTML = language == "id" ? "No.Telepon wajib diisi untuk terhubung ke Agen Kami!" : "Phone number is required to connect an agent!"
-                //     // me.placeholder = language == "id" ? 'No.Telepon wajib diisi untuk terhubung ke Agen Kami' : "Phone number is required to connect an agent"
+                //     document.getElementById("invalid-message").innerHTML = language == "tl" ? "No.Telepon wajib diisi untuk terhubung ke Agen Kami!" : "Phone number is required to connect an agent!"
+                //     // me.placeholder = language == "tl" ? 'No.Telepon wajib diisi untuk terhubung ke Agen Kami' : "Phone number is required to connect an agent"
                 //     phone.classList.remove('invalid-placeholder');
                 //     // name.classList.remove("invalid-placeholder");
                 //     // email.classList.remove("invalid-placeholder")
